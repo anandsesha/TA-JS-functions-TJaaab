@@ -27,16 +27,12 @@ addTwoNumbers(20, 32); // 32
 addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
 function addTwoNumbers(firstNum,secondNum){
-  if(firstNum === +firstNum && secondNum === +secondNum){
-    return `${firstNum + secondNum}`;
-  }else{
+  if(typeof firstNum !== "number" || typeof secondNum !== "number"){
     alert(`Enter Valid Input`);
+  }else{
+    return `${firstNum + secondNum}`;
   }
 }
-let sum = addTwoNumbers(10,22);
-let sum1 = addTwoNumbers(10,"100");
-alert(sum);
-alert(sum1);
 /*
 4. Create a function named `calc` which accepts three parameter `numA`, `numB` and `operation`. Operation
 can only be one of these `add, sub, mul, div`. Based on the operator return the value. If the `numA` or `numB`
@@ -50,17 +46,21 @@ calc(20, 10, 'mul'); // 200
 */
 function calc(numA,numB,operation){
   let result = 0;
-  if(operation == "add"){
-    return result = numA + numB;
-  }else if(operation == "sub"){
-    return result = numA - numB;
-  }else if(operation == "mul"){
-    return result = numA * numB;
-  }else if(operation == "div"){
-    return result = numA / numB;
+  if(typeof numA !== "number" || typeof numB !== "number"){
+    alert(`Enter a valid input`);
   }else{
-    alert(`Enter Valid Input`);
-  }
+    if(operation == "add"){
+      return result = numA + numB;
+    }else if(operation == "sub"){
+      return result = numA - numB;
+    }else if(operation == "mul"){
+      return result = numA * numB;
+    }else if(operation == "div"){
+      return result = numA / numB;
+    }else{
+      alert(`Enter Valid Input`);
+    }
+  } 
 }
 let add = calc(10,20,"add");
 alert(add);
@@ -77,13 +77,13 @@ isLeapYear(2001); // false
 */
 function isLeapYear(year){
   if(year%400 == 0){
-    alert(`true`);
+    return true;
   }else if(year%100 == 0){
-    alert(`false`);
+    return false;
   }else if(year%4 == 0){
-    alert(`true`);
+    return true;
   }else{
-    alert(`false`);
+    return false;
   }
 }
 isLeapYear(2000);
