@@ -24,7 +24,7 @@ function calculateMoviesToWatch(age,number) {
   let noOfMoviesPerMonth = 4 * number;
   let noOfMoviesPerYear = 12 * noOfMoviesPerMonth;
   const MAX_AGE = 100;
-  return MAX_AGE * noOfMoviesPerYear;
+  return (MAX_AGE - age) * noOfMoviesPerYear;
 }
 let resultMovies = calculateMoviesToWatch(25,2);
 console.log(resultMovies);
