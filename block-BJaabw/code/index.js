@@ -15,7 +15,7 @@ function minToSec(minutes = 1) {
   return minutes * 60;
 }
 // - Execute the function with required parameter
-
+minToSec(30);
 /* 2. 
 Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
 Return true and false based on that.
@@ -34,7 +34,7 @@ function isInRange(lower,upper,number) {
   }
 }
 // - Execute the function with required parameter
-
+isInRange(1,20,10);
 /* 2. calculateBMI
 
 
@@ -65,7 +65,7 @@ function calculateBMI(weight,height) {
     return `Obese`;
   }
 }
-
+calculateBMI(70,1.5);
 /* 3. appropiateDrinks
 
 Create a function that take the age are return the appropiate drink based on these conditions:
